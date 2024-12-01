@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TalkToMe Chat</title>
+    <style>
+      body {
+        background-color: #121212;
+        color: white;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    
+    #container {
+        width: 80%;
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+    }
+
+      #avatar-container {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
+
+    #avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 2px solid white;
+        object-fit: cover;
+    }
+    
+    #username-input {
+        width: 100%;
+        max-width: 400px;
+        margin: auto;
+        text-align: center;
+        background-color: #1e1e1e;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    }
+    
+    #username-input input {
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        border: 1px solid #444;
+        background-color: #1e1e1e;
+        color: white;
+        width: 100%;
+    }
+    
+    #username-input button {
+        width: 100%;
+    }
+    
+    #chat-box {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        margin-top: 20px;
+    }
+    
+    .message-box {
+        padding: 15px;
+        margin: 10px auto;
+        border-radius: 15px;
+        max-width: 80%;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .message-right {
+        align-self: flex-end;
+        background-color: #1e1e1e;
+        text-align: right;
+    }
+    
+    .message-left {
+        align-self: flex-start;
+        background-color: #333333;
+    }
+    
+    .responses-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+    
+    .response-box {
+        background-color: #1e1e1e;
+        padding: 20px;
+        border-radius: 10px;
+        cursor: pointer;
+        width: 40%; /* 固定宽度 */
+        height: 520px; /* 固定高度 */
+        text-align: center;
+        border: 1px solid #444;
+        transition: background-color 0.3s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden; /* 防止文字超出 */
+    }
+    
+    .response-box:hover {
+        background-color: #007bff;
+    }
+    
+    #message-box {
+        margin-top: 20px;
+        padding: 10px 15px;
+        border-radius: 10px;
+        background-color: #1e1e1e;
+        border: 1px solid #444;
+        color: white;
+        width: 100%;
+        max-width: 800px;
+        box-sizing: border-box;
+    }
+    
+    button {
+        padding: 10px 15px;
+        margin-top: 10px;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    
+    button:hover {
+        background-color: #0056b3;
+    }
+    
+    </style>
+</head>
+<body>
+    <div id="avatar-container">
+      <img id="avatar" src="https://media.istockphoto.com/id/1337144146/vector/default-avatar-profile-icon-vector.jpg?s=612x612&w=0&k=20&c=BIbFwuv7FxTWvh5S3vB6bkT0Qv8Vn8N5Ffseq84ClGI=" alt="User Avatar">
+  </div>
+
+    <div id="container">
+        <h1 style="text-align: center;">TalkToMe</h1>
+        <p style="text-align: center;">Please note: Any emotional responses from the chatbot is algorithmic simulations rather than genuine empathy.</p>
+
+        <div id="username-input">
+            <p>Please enter your test name to start:</p>
+            <input type="text" id="username" placeholder="Enter your test name">
+            <button onclick="startChat()">Start</button>
+        </div>
+
+        <div id="chat-box" style="display: none;"></div>
+        <input type="text" id="message-box" placeholder="Message TalkToMe" style="display: none;">
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
+
+
