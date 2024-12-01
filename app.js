@@ -1,5 +1,4 @@
-// 用户数据和场景定义
-// 场景数据
+// Scenarios and responses for the chatbot
 const scenarios = [
   {
       scenario: "Loss of a loved one",
@@ -52,7 +51,7 @@ let currentScenarioIndex = 0;
 let userChoices = [];
 let username = "";
 
-// 启动聊天
+// Start the chat
 function startChat() {
     username = document.getElementById("username").value.trim();
     if (!username) {
@@ -67,20 +66,20 @@ function startChat() {
     initializeChat();
 }
 
-// 初始化聊天界面
+// Initialize the chat
 function initializeChat() {
     const chatBox = document.getElementById("chat-box");
     chatBox.innerHTML = "";
 
     const scenario = scenarios[currentScenarioIndex];
 
-    // 情景描述框 (右侧)
+    // Scenario description (right side)
     const scenarioBox = document.createElement("div");
     scenarioBox.className = "message-box message-right";
     scenarioBox.textContent = `Scenario ${currentScenarioIndex + 1}: ${scenario.description}`;
     chatBox.appendChild(scenarioBox);
 
-    // 回答选项 (左侧)
+    // Responses (left side)
     const responseContainer = document.createElement("div");
     responseContainer.className = "responses-container";
 
@@ -95,7 +94,7 @@ function initializeChat() {
     chatBox.appendChild(responseContainer);
 }
 
-// 处理用户选择
+// Handle response selection
 function handleResponseSelection(index) {
     const scenario = scenarios[currentScenarioIndex];
     const choice = {
@@ -116,14 +115,14 @@ function handleResponseSelection(index) {
     }
 }
 
-// 结束聊天
+// End the chat
 function endChat() {
     const chatBox = document.getElementById("chat-box");
     chatBox.innerHTML = "<h2 style='text-align: center;'>Thank you for completing the survey!</h2>";
     downloadResults();
 }
 
-// 下载结果为 CSV
+// Download the survey results as a CSV file
 function downloadResults() {
     let csvContent = "data:text/csv;charset=utf-8,Username,Scenario,Description,Selected Response,Type\n";
 
