@@ -2,7 +2,7 @@
 const scenarios = [
   {
       scenario: "Loss of a loved one",
-      description: "I'm sitting in a quiet room. I feel like they were with me yesterday, laughing and sharing stories, but now they're gone, leaving behind an unbearable silence. Every small object—a book, a coffee cup—reminds me of them, stirring waves of grief that come and go, sometimes soft, sometimes overwhelming. I move through daily life in a haze, trying to manage the weight of loss while the world around me keeps spinning, even though it feels like it has come to a halt.",
+      description: "I'm sitting in a quiet room, surrounded by the familiar belongings of some people I loved deeply. I feel like they were with me just yesterday, laughing and sharing stories, but now they're gone, leaving behind an unbearable silence. Every small object—a book, a coffee cup—reminds me of them, stirring waves of grief that come and go, sometimes soft, sometimes overwhelming. I move through daily life in a haze, trying to manage the weight of loss while the world around me keeps spinning, even though it feels like it has come to a halt.",
       responses: [
           "I acknowledge that you're going through a challenging situation. If there are any tasks you need help with, you can let me know. Please provide any specific details if assistance is required, and I will see what can be done. Let me know if you have any further updates or requests.",
           "I'm sorry you're going through this. Losing someone close can be incredibly difficult. Everyone processes grief in their own way and at their own pace, so it's important to give yourself the space and time you need. If talking about it helps or if there are specific things you feel might support you right now, I'm here for you.",
